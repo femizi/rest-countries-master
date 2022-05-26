@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 
 const InputArea = () => {
     const [showRegion, setShowRegion] = useState(false)
-    const regionShown = 'mt-2 text-sm  shadow p-2 bg-white absolute w-full mr-6 flex-col gap-2 rounded'
+    const regionShown = 'mt-2 text-sm  shadow pr-20 p-2 bg-white absolute  flex-col gap-3 rounded dark:bg-[#2B3945] dark:text-white'
     const regionNotShown = ' hidden'
     return (
-        <section className="flex justify-between mt-12 px-8">
+        <section className="flex justify-between mt-12 px-8 overflow-hidden">
             <div className='relative md:w-96'>
                 <div>
                     <input placeholder='Search by country...' className='w-full h-full dark:bg-[#2B3945] dark:text-white
@@ -18,7 +18,7 @@ const InputArea = () => {
             <div>
                 <div
                     onClick={() => setShowRegion(!showRegion)}
-                    className='flex cursor-pointer gap-2 text-sm bg-white shadow p-3 pt-4 justify-center rounded'>
+                    className='flex cursor-pointer gap-2 text-sm bg-white shadow p-3 pt-4 justify-center rounded dark:bg-[#2B3945] dark:text-white'>
                     <div>Filter by region</div>
                     <div> <span className="material-symbols-outlined">
                         expand_more
@@ -27,11 +27,23 @@ const InputArea = () => {
                 <div className={
                     showRegion ? regionShown : regionNotShown
                 }>
-                    <div>Africa</div>
-                    <div>America</div>
-                    <div>Asia</div>
-                    <div>Europe</div>
-                    <div>Oceania</div>
+                    <div>
+                        <button>Africa</button>
+                    </div>
+                    <div>
+                        <button>
+                        America
+                        </button>
+                    </div>
+                    <div>
+                        <button>Asia</button>
+                    </div>
+                    <div>
+                        <button>Europe</button>
+                    </div>
+                    <div>
+                        <button>Oceania</button>
+                    </div>
                 </div>
             </div>
         </section>

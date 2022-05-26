@@ -4,10 +4,10 @@ import DetailsImage from './DetailsImage'
 import DetailsText from './DetailsText'
 import Header from './Header'
 
-const DetailsComposer = ({setScreenShown}) => {
+const DetailsComposer = ({setScreenShown, setMode, mode}) => {
     return (
         <div>
-            <Header />
+            <Header setMode={setMode} mode={mode} />
             <div className='mr-auto ml-8 my-6'>
                <BackButton setScreenShown={setScreenShown}/>
             </div>

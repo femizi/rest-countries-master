@@ -1,20 +1,20 @@
 import React from 'react'
 
-const CountrySmall = ({setScreenShown}) => {
+const CountrySmall = ({setScreenShown, name, population, region, capital, png}) => {
 
   return (
     <a className='rounded shadow-md' href="#" onClick={()=> setScreenShown(`details`)}>
     <div className="grid grid-rows-2  " >
       
         <div>
-          <img className='rounded-t' src="/test.jpg" />
+          <img className='rounded-t' src={png} />
         </div>
         <div className='p-6 text-sm bg-white dark:bg-[#2B3945] dark:text-white '>
-          <h2 className='mb-4 text-base font-extrabold'>Germany</h2>
+          <h2 className='mb-4 text-base font-extrabold'>{name}</h2>
 
-          <div><strong className='font-semibold mr-1'>Population:</strong> <span className='font-light'>8,822,000</span></div>
-          <div><strong className='font-semibold mr-1'>Region:</strong> <span className='font-light' >Europe</span></div>
-          <div><strong className='font-semibold mr-1'>Capital:</strong><span className='font-light'>Berlin</span></div>
+          <div><strong className='font-semibold mr-1'>Population:</strong> <span className='font-light'>{population}</span></div>
+          <div><strong className='font-semibold mr-1'>Region:</strong> <span className='font-light' >{region}</span></div>
+          <div><strong className='font-semibold mr-1'>Capital:</strong><span className='font-light'>{capital}</span></div>
 
 
 
