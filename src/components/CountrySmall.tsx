@@ -3,13 +3,13 @@ import React from 'react'
 const CountrySmall = ({setScreenShown, name, population, region, capital, png}) => {
 
   return (
-    <a className='rounded shadow-md' href="#" onClick={()=> setScreenShown(`details`)}>
-    <div className="grid grid-rows-2  " >
+    <a className='rounded bg-white dark:bg-[#2B3945] shadow-md' href="#" onClick={()=> setScreenShown(`details`)}>
+    <div className="grid grid-rows-2 h-full  " >
       
-        <div>
-          <img className='rounded-t' src={png} />
+        <div className='dark:bg-[#2B3945]'>
+          <img className='rounded-t object-contain' src={png} />
         </div>
-        <div className='p-6 text-sm bg-white dark:bg-[#2B3945] dark:text-white '>
+        <div className='p-6 text-sm bg-white dark:bg-[#2B3945] h-full dark:text-white '>
           <h2 className='mb-4 text-base font-extrabold'>{name}</h2>
 
           <div><strong className='font-semibold mr-1'>Population:</strong> <span className='font-light'>{population}</span></div>

@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
 
-const InputArea = () => {
+const InputArea = ({ setTerm, query, term  }) => {
     const [showRegion, setShowRegion] = useState(false)
     const regionShown = 'mt-2 text-sm  shadow pr-20 p-2 bg-white absolute  flex-col gap-3 rounded dark:bg-[#2B3945] dark:text-white'
     const regionNotShown = ' hidden'
+    function clickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>, region: string) {
+        setTerm(`https://restcountries.com/v3.1/region/${region}`)
+       console.log(query)
+        setShowRegion(!showRegion)
+    }
     return (
         <section className="flex justify-between mt-12 px-8 overflow-hidden">
             <div className='relative md:w-96'>
@@ -28,21 +33,30 @@ const InputArea = () => {
                     showRegion ? regionShown : regionNotShown
                 }>
                     <div>
-                        <button>Africa</button>
+                        <button
+                            onClick={(e) => clickHandler(e, `africa`)}
+                        >Africa</button>
                     </div>
                     <div>
-                        <button>
-                        America
+                        <button onClick={(e) => clickHandler(e, `america`)}>
+                            America
                         </button>
                     </div>
                     <div>
-                        <button>Asia</button>
+                        <button
+                            onClick={(e) => clickHandler(e, `asia`)}>
+                            Asia
+                        </button>
                     </div>
                     <div>
-                        <button>Europe</button>
+                        <button
+                            onClick={(e) => clickHandler(e, `europe`)}
+                        >Europe</button>
                     </div>
                     <div>
-                        <button>Oceania</button>
+                        <button
+                        onClick={(e)=> clickHandler(e, `oceania`) }
+                        >Oceania</button>
                     </div>
                 </div>
             </div>
