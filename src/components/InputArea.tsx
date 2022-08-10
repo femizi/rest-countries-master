@@ -41,7 +41,7 @@ const InputArea = ({ setTerm, query, }) => {
         }
     };
     return (
-        <section className="flex justify-between mt-12 px-8 overflow-hidden">
+        <section className="flex justify-between gap-4 mt-12 px-8 overflow-hidden">
             <div className='relative md:w-96'>
                 <div>
                     <input onKeyDown={(e) => handleKeyDown(e)} placeholder='Search by country...' className='w-full h-full dark:bg-[#2B3945] dark:text-white
@@ -54,7 +54,7 @@ const InputArea = ({ setTerm, query, }) => {
             <div>
                 <div
                     onClick={() => setShowRegion(!showRegion)}
-                    className='flex cursor-pointer gap-2 text-sm bg-white shadow p-3 pt-4 justify-center rounded dark:bg-[#2B3945] dark:text-white'>
+                    className='flex cursor-pointer gap-0 md:gap-2 text-sm bg-white shadow p-3 pt-4 justify-center rounded dark:bg-[#2B3945] dark:text-white'>
                     <div>Filter by region</div>
                     <div> <span className="material-symbols-outlined">
                         expand_more

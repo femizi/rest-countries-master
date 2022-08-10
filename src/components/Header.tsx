@@ -13,7 +13,7 @@ const Header = ({setMode, mode}) => {
             <span className="material-symbols-outlined">
               dark_mode
             </span>
-            <div className='font-semibold'>Dark Mode</div>
+            <div className='text-base md:text-lg font-semibold'>Dark Mode</div>
           </button>   </div>
       
       </div>
