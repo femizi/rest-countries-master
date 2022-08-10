@@ -54,7 +54,7 @@ const InputArea = ({ setTerm, query, }) => {
             <div>
                 <div
                     onClick={() => setShowRegion(!showRegion)}
-                    className='flex cursor-pointer gap-0 md:gap-2 text-sm bg-white shadow p-3 pt-4 justify-center rounded dark:bg-[#2B3945] dark:text-white'>
+                    className='flex cursor-pointer gap-0 md:gap-2 text-sm bg-white shadow p-2 p-2 md:p-3 md:pt-4 justify-center rounded dark:bg-[#2B3945] dark:text-white'>
                     <div>Filter by region</div>
                     <div> <span className="material-symbols-outlined">
                         expand_more
