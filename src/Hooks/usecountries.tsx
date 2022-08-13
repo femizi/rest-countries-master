@@ -1,3 +1,4 @@
+import axios from "axios"
 import { useQuery } from "react-query"
 
 export function useCountries(term: string, type?: string) {
@@ -15,9 +16,10 @@ export function useCountries(term: string, type?: string) {
                 }
         }
        
-        console.log(url())
-        const response = await fetch(url())
-        const data = await response.json()
+        
+        
+        const data = await axios.get(url())
+        console.log(data.data)
         return data
     })
     return query
