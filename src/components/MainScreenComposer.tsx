@@ -23,13 +23,12 @@ const MainScreenComposer = ({ setScreenShown, setMode, mode, setDetails }) => {
       <InputArea setTerm={setTerm} query={query} />
       <main className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-10 mt-4 px-8">
         {query.isLoading ? <Loader />
-          : query.isRefetching ? <Loader /> : query.isError ?
-
-            <Error query={query} /> 
-            : query.data.data.map((country: { name: any; flags: { png: any }; capital: string; population: string; region: string }, index) => (
-              <CountrySmall setScreenShown={setScreenShown} setDetails={setDetails} commonName={country.name.common}
-                key={index} png={country.flags.png} capital={country.capital} population={country.population} 
-                name={country.name.official} region={country.region} />))}
+          : query.isRefetching ? <Loader /> :
+            query.isError ? <Error query={query} />
+              : query.data.data.map((country: { name: any; flags: { png: string }; capital: string; population: string; region: string }, index) => (
+                <CountrySmall setScreenShown={setScreenShown} setDetails={setDetails} commonName={country.name.common}
+                  key={index} png={country.flags.png} capital={country.capital} population={country.population}
+                  name={country.name.official} region={country.region} />))}
       </main>
     </div>
   )

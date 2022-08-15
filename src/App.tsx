@@ -16,7 +16,6 @@ console.log(details)
 
       <div className={mode ? `` : `dark`}>
         <div className={lightCss} >
-
           {
             screenShown === `main` ?
               <MainScreenComposer setScreenShown={setScreenShown} setMode={setMode} mode={mode} setDetails={setDetails} /> :
