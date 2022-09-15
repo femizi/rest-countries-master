@@ -15,7 +15,7 @@ const MainScreenComposer = ({ setScreenShown, setMode, mode, setDetails }) => {
 
 
   const query = useCountries(term.name, term.type)
-  //  console.table((query.data));
+
 
   return (
     <div >

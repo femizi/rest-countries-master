@@ -1,6 +1,7 @@
 import React from 'react'
 
 const DetailsText = ({ country }) => {
+   
     const buttonOne = country?.borders !== undefined ? country.borders[0] : `None`
     const buttonTwo = country?.borders !== undefined ? country.borders[1] : `None`
 

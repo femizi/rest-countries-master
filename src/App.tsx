@@ -9,7 +9,7 @@ function App() {
   const [screenShown, setScreenShown] = useState<string>(`main`)
   const [mode, setMode] = useState(true)
   const [details, setDetails] = useState(``)
-  const lightCss = "App bg-[#FAFAFA] min-h-screen  text-[#111517] dark:bg-[#202C37] dark:text-white"
+  const lightCss = "App bg-[#FAFAFA]  min-h-screen  text-[#111517] dark:bg-[#202C37] dark:text-white"
 console.log(details)
   return (
     <QueryClientProvider client={new QueryClient()}>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 const InputArea = ({ setTerm, query, }) => {
     const [showRegion, setShowRegion] = useState(false)
-    const regionShown = 'mt-2 text-sm  shadow pr-20 p-2 bg-white absolute  flex-col gap-3 rounded dark:bg-[#2B3945] dark:text-white'
+    const regionShown = 'mt-2 text-sm  shadow pr-20 p-4 bg-white absolute  flex-col gap-5 rounded dark:bg-[#2B3945] dark:text-white'
     const regionNotShown = ' hidden'
     function clickHandler(e: React.MouseEvent<HTMLButtonElement, MouseEvent>, answer: string, type: string) {
         setTerm((prev) => {

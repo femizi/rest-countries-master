@@ -3,7 +3,7 @@ import React from 'react'
 const CountrySmall = ({ setScreenShown, name, population, region, capital, png, setDetails, commonName }) => {
 
   return (
-    <a className='rounded bg-white dark:bg-[#2B3945] shadow-md' href="#" onClick={() => { setScreenShown(`details`); setDetails(commonName.toLowerCase()) }}>
+    <a className='rounded bg-white dark:bg-[#2B3945] shadow-md' href="#" onClick={() => { setScreenShown(`details`); setDetails(name.toLowerCase()) }}>
       <div className="grid grid-rows-2 h-full  " >
         <div className='dark:bg-[#2B3945]'>
           <img className='rounded-t w-full object-contain' src={png} />
